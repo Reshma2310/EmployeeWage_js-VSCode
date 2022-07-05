@@ -92,3 +92,10 @@ function totalDaysWorked(numOfDays, dailyWage) {
     return numOfDays;
 }
 console.log("7G: Number of Days Employee Worked: "+ empDailyWageArr.reduce(totalDaysWorked, 0));
+
+//UC8: Map Functions
+let empDailyWageMap = new Map();
+empDailyWageMap.set("DailyWage", empDailyWageArr);
+console.log("UC8: Day wise Emp Wage:");
+console.log(empDailyWageMap.get("DailyWage"));
+console.log("Emp Wage Map totalHrs: " + Array.from(empDailyWageArr.values()).reduce(totalWages, 0));
