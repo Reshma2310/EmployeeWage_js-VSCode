@@ -26,6 +26,7 @@ let totalEmpHrs = 0;
 let empHrs = 0;
 let totalWorkingDays = 0;
 let empDailyWageArr = new Array();
+let empDailyHrsAndWage = new Array();
 let empDailyWageMap = new Map();
 let empDailyHrsMap = new Map();
 
@@ -37,7 +38,17 @@ while (totalEmpHrs <=MAX_HRS_IN_MONTH && totalWorkingDays < No_Of_Working_Days) 
     empDailyWageArr.push(calDailyWage(empHrs));
     empDailyHrsMap.set(totalWorkingDays, empHrs);
     empDailyWageMap.set(totalWorkingDays, calDailyWage(empHrs));
+    //UC10: Storing Day No, Hours and Wage in an object
+    empDailyHrsAndWage.push({
+        day:totalWorkingDays,
+        dailyHrs:empHrs,
+        dayWage:calDailyWage(empHrs),
+        toString()    {
+            return "\nDay: "+ this.day +" Working Hours: "+ this.dailyHrs +" Wage: "+ this.dayWage
+            }
+    });
 }
+
 let empWage = calDailyWage(totalEmpHrs);
 console.log(empDailyWageArr);
 console.log("Total Days: " + totalWorkingDays  + ", Total Working Hours: " + totalEmpHrs + ", Employee Wage: " + empWage);
@@ -121,3 +132,6 @@ empDailyHrsMap.forEach( (value, key, map) => {
 console.log("Full Working Days: "+ fullWorkingDays);
 console.log("Part Working Days: "+ partWorkingDays);
 console.log("Non Working Days: "+ nonWorkingDays);
+
+//UC10: Execution (Object Creation)
+console.log("UC10: Storing Day No, Working Hrs & Wage "+ empDailyHrsAndWage);
