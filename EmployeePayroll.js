@@ -1,8 +1,7 @@
 class EmployeePayrollData
 {
     id; 
-    salary;
-    gender;    
+    salary;      
     // Constructor
     constructor(id, name, salary)
     {
