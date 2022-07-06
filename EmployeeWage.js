@@ -133,5 +133,5 @@ console.log("Full Working Days: "+ fullWorkingDays);
 console.log("Part Working Days: "+ partWorkingDays);
 console.log("Non Working Days: "+ nonWorkingDays);
 
-//UC10: Execution (Object Creation)
+//UC10: Execution (Object Creation to Storing Day No, Hours and Wage)
 console.log("UC10: Storing Day No, Working Hrs & Wage "+ empDailyHrsAndWage);
